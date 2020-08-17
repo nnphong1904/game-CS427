@@ -307,6 +307,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPower: 300
   gameController: {fileID: 191236890}
+  isGrounded: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!61 &209194558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -875,9 +879,9 @@ GameObject:
   - component: {fileID: 809159344}
   - component: {fileID: 809159346}
   - component: {fileID: 809159347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
