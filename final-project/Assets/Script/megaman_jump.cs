@@ -44,4 +44,9 @@ public class megaman_jump : MonoBehaviour {
             isGrounded = false;
         }
     }
+    private void OnTriggerEnter2D (Collider2D other) {
+        if (other.gameObject.tag == "wall") {
+            gameController.GetComponent<GameController> ().increasePoint ();
+        }
+    }
 }

@@ -9,6 +9,10 @@ public class GameController : MonoBehaviour {
     public GameObject panelEndGame;
     public Text yourPoint;
     public Button restartButton;
+    public int point = 0;
+    public int level = 1;
+    public Text currentPoint;
+    public Text currentLevel;
     void Start () {
         Time.timeScale = 0;
         isEndGame = false;
@@ -34,5 +38,15 @@ public class GameController : MonoBehaviour {
         Time.timeScale = 0;
         isEndGame = true;
         panelEndGame.SetActive (true);
+        yourPoint.text = "Your Point: " + point.ToString ();
     }
+    public void increasePoint () {
+        point += 100;
+        currentPoint.text = "Point: " + point.ToString ();
+        if (point > 0 && !isEndGame && point % 100 == 0) {
+            level += 1;
+            currentLevel.text = "Level: " + level.ToString ();
+        }
+    }
+
 }
