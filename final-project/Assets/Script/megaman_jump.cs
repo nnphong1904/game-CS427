@@ -23,9 +23,9 @@ public class megaman_jump : MonoBehaviour {
             isGrounded = false;
             obj.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpPower));
         }
-        if (Input.GetButtonDown ("End") && currentY < 3) {
-            gameController.GetComponent<GameController> ().EndGame ();
-        }
+        // if (Input.GetButtonDown ("End") && currentY < 3) {
+        //     gameController.GetComponent<GameController> ().EndGame ();
+        // }
 
     }
     void EndGame () {
@@ -34,6 +34,9 @@ public class megaman_jump : MonoBehaviour {
     private void OnCollisionEnter2D (Collision2D other) {
         if (other.gameObject.tag == "ground") {
             isGrounded = true;
+        }
+        if (other.gameObject.tag == "wall") {
+            gameController.GetComponent<GameController> ().EndGame ();
         }
     }
     private void OnCollisionExit2D (Collision2D other) {
