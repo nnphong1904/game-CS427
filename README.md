@@ -6,7 +6,6 @@
 This game was called Jump Man. This is a platform game, the megaman must jump through the obstacles to survive. Each time player jump, if character collision with obstacles then character will died game over, if character can jump through obstacles then player will be awarded 10 point.
 If player has enough 100 points, then player will level up. 
 Player will use up arrow key on keyboard to help character jump through the obstacles.
-### Application: 
 This game was build for Windows and only support for Windows.
 Recommend Windows 8 or higher.
 ### Unity version: 2019.4.2f1
